@@ -1,49 +1,60 @@
-.leftBar{
-    height: 100%;
+@import '../../variables';
+
+.leftBar {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
-    background-color: rgb(255, 255, 255);
-    &::-webkit-scrollbar{
-        display: none;
+    position: fixed;
+    top: $navbar-height;
+    width: $leftbar-width; // Set a fixed width
+    height: 100vh; // Full height of the viewport
+    background-color: #f0f2f5;
+    padding: 10px;
+    box-sizing: border-box;
+  
+    &__section {
+      &--upper {
+        flex-grow: 1;
+      }
+  
+      &--lower {
+        flex-grow: 0;
+      }
     }
-    padding: 10px 20px;
-    position: fixed; /* Change to absolute */
-    top: 90px;
-    left: 0px;
-    height: calc(100vh - 90px);
-
-    .upper {
-        display:flex;
-        flex-direction: column;
-        justify-content: left;
-        
-        height: 70%;
-        gap: 20px;
-
-        .userSection {
-            img {
-
-            }
-            span {
-
-            }
-        }
-
-        .upperItems {
-            display: flex;
-            flex-direction: row;
-            justify-content: left;
-            gap: 20px;
-
-        }
+  
+    &__userSection {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  
+      &__userImg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
     }
-
-    .lower {
-        display:flex;
-        
-        height: 30%;
+  
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #e4e6eb;
+        border-radius: 8px;
+        padding: 5px;
+      }
     }
-
-    
-}
+  
+    &__icon {
+      font-size: 20px;
+    }
+  
+    &__divider {
+      margin: 10px 0;
+    }
+  }
+  

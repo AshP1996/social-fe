@@ -1,40 +1,36 @@
-import "./navBar.scss"
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaSearch, FaRegUserCircle } from "react-icons/fa";
 import { WiMoonAltFirstQuarter } from "react-icons/wi";
 import { TbApps } from "react-icons/tb";
-import { FaSearch } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
-import { MdNotificationsActive } from "react-icons/md";
-import { FaRegUserCircle } from "react-icons/fa";
+import { MdEmail, MdNotificationsActive } from "react-icons/md";
+import "./navBar.scss";
 
-export const Navbar = () => {
+export const NavBar = () => {
   return (
-    <div className="navbar">
-      <div className="left">
-        <Link to="/" >
-        <span>Social</span>
+    <nav className="navbar">
+      <div className="navbar__section navbar__section--left">
+        <Link to="/" className="navbar__brand">
+          <span>Social</span>
         </Link>
-        <FaHome />
-        <WiMoonAltFirstQuarter />
-        <TbApps />
-        <div className="search">
-          <FaSearch />
-          <input type="text" placeholder="Search ..." />
+        <FaHome className="navbar__icon" />
+        <WiMoonAltFirstQuarter className="navbar__icon" />
+        <TbApps className="navbar__icon" />
+        <div className="navbar__search">
+          <FaSearch className="navbar__icon" />
+          <input type="text" placeholder="Search ..." className="navbar__input" />
         </div>
       </div>
-      <div className="right">
-        <IoPersonOutline />
-        <MdEmail />
-        <MdNotificationsActive />
-        <div className="user">
-          <FaRegUserCircle />
-          {/* <img src="" alt=" " /> */}
-          <span>Jhaon Doe</span>
+      <div className="navbar__section navbar__section--right">
+        <IoPersonOutline className="navbar__icon" />
+        <MdEmail className="navbar__icon" />
+        <MdNotificationsActive className="navbar__icon" />
+        <div className="navbar__user">
+          <FaRegUserCircle className="navbar__icon" />
+          <span>John Doe</span>
         </div>
-      
       </div>
-    </div>
-  )
-}
+    </nav>
+  );
+};

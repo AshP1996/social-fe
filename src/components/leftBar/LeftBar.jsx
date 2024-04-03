@@ -1,75 +1,39 @@
-import "./leftBar.scss"
-
-import { MdGroups as GroupIcon } from "react-icons/md";
+import React from 'react';
+import { MdGroups as GroupIcon, MdOutlineWatchLater as WatchLaterIcon } from "react-icons/md";
 import { FaSitemap as FriendsIcon } from "react-icons/fa";
-import { MdOutlineWatchLater as WatchLaterIcon } from "react-icons/md";
 import { RiMemoriesFill as MemoriesIcon } from "react-icons/ri";
-
+import "./LeftBar.scss";
 
 export const LeftBar = () => {
   return (
-    <div className="leftBar">
-      <div className="upper">
-        <div className="userSection">
-          <img src="" alt="" />
+    <aside className="leftBar">
+      <div className="leftBar__section leftBar__section--upper">
+        {/* <div className="leftBar__userSection">
+          <img src="" alt="User" className="leftBar__userImg"/>
           <span>Jhon Doe</span>
-        </div> 
-        <hr></hr>       
-        <div className="upperItems">
-          <FriendsIcon />
+        </div>  */}
+        {/* <hr className="leftBar__divider"/>        */}
+        <div className="leftBar__item">
+          <FriendsIcon className="leftBar__icon"/>
           <span>Friends</span>
         </div>
-        <div className="upperItems">
-          <GroupIcon />   
+        <div className="leftBar__item">
+          <GroupIcon className="leftBar__icon"/>   
           <span>Groups</span>       
         </div>
-        <div className="upperItems">
-          <WatchLaterIcon />
+        <div className="leftBar__item">
+          <WatchLaterIcon className="leftBar__icon"/>
           <span>Watch</span>
         </div>
-        <div className="upperItems">
-          <MemoriesIcon />
+        <div className="leftBar__item">
+          <MemoriesIcon className="leftBar__icon"/>
           <span>Memories</span>
         </div>
       </div>
 
-      <div className="lower">
+      <div className="leftBar__section leftBar__section--lower">
         <h1>Hello</h1>
       </div>
-
-    </div>
-  )
-}
-
-
-  // <div className="continer">
-  //         <div className="menu">
-  //           <div className="user">
-  //             <FaRegUserCircle />
-  //             {/* <img src="" alt=" " /> */}
-            
-  //             <span>Jhon Doe</span>
-  //           </div>
-  //           <hr />
-  //           <div className="items">
-  //             <FaSitemap />
-  //             <span>Friends</span>
-  //           </div>
-  //           <div className="groups">
-  //             <MdGroups />
-  //             <span>Groups</span>
-  //           </div>
-  //           <div className="watch">
-  //             <MdOutlineWatchLater/>
-  //             <span>watch</span>
-  //           </div>
-  //           <div className="memories">
-  //             <RiMemoriesFill/>
-  //             <span>memories</span>
-  //           </div>
-  //         </div>
-  //         <hr />
-  //         <div className="menu">
-  //           <span>Your shortcuts</span>
-  //         </div>
-  //       </div>
+    </aside>
+  );
+};

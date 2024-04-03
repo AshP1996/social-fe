@@ -15,13 +15,13 @@ const currentUser = true;
 
 
 // ProtectedRoute component to handle authentication
-const ProtectedRoute = ({ route }) => {
+const ProtectedRoute = ({ children }) => {
   // if current user is null redirect to login 
   if (!currentUser) {
     return <Navigate to="/login" />;
   }
   // else redirect to the original route
-  return route;
+  return children;
 };
 
 

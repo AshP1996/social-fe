@@ -1,57 +1,67 @@
-.navbar{
+@import '../../variables';
+
+.navbar {
     display: flex;
     position: sticky;
     top: 0;
+    left: 0;
     background-color: white;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px ;
-    height: 70px;
+    padding: 5px 20px;
+    height: $navbar-height;
     color: rgb(11, 11, 11);
     border-bottom: 1px solid lightgrey;
-    .left{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-     
-        .span{
-            display: flex;
-            font-size: 30px;
-            color: blue;
-        }
-        .search{
-            display: flex;
-            align-items: center;
-            border: 1px solid lightgrey;
-            border-radius: 6px;
-            padding: 5px;
-            .input{
-                border: none;
-                width: 700px;
-                gap: 10px;
-            }
-        }
+    width: 100%;
+    box-sizing: border-box;
+  
+    &__section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  
+      &--left {
+        justify-content: start;
+      }
+  
+      &--right {
+        justify-content: end;
+      }
     }
-    .right{
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        
-        .user{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            img{
-                width: 30px;
-                height: 30px;
-                border-radius: 50px;
-                object-fit: cover;
-            }
-            .span{
-
-            }
-        }
+  
+    &__brand {
+      display: flex;
+      font-size: 20px;
+      color: blue;
+  
+      span {
+        display: block;
+      }
     }
-}
+  
+    &__search {
+      display: flex;
+      align-items: center;
+      border: 1px solid lightgrey;
+      border-radius: 6px;
+      padding: 5px;
+    }
+  
+    &__icon {
+      font-size: 20px;
+    }
+  
+    &__user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+  
+    &__input {
+      flex-grow: 1;
+      border: none;
+      margin-left: 10px;
+    }
+  }
+  
