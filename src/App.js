@@ -2,7 +2,6 @@ import "./App.css";
 import {
   createBrowserRouter,
   Navigate,
-  Outlet,
   RouterProvider,
 } from "react-router-dom";
 import { Home } from "./pages/home/Home";

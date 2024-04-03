@@ -12,9 +12,10 @@ export const LeftBar = () => {
       <div className="upper">
         <div className="userSection">
           <img src="" alt="" />
+          <br />
           <span>Jhon Doe</span>
         </div> 
-        <hr></hr>       
+        <hr />
         <div className="upperItems">
           <FriendsIcon />
           <span>Friends</span>
@@ -31,10 +32,26 @@ export const LeftBar = () => {
           <MemoriesIcon />
           <span>Memories</span>
         </div>
+        <div className="upperItems">
+          <MemoriesIcon />
+          <span>Memories</span>
+        </div>
       </div>
 
       <div className="lower">
-        <h1>Hello</h1>
+        <h3>your shortcuts</h3>
+        <div className="lowerItems">
+          <MemoriesIcon />
+          <span>Memories</span>
+        </div>
+        <div className="lowerItems">
+          <MemoriesIcon />
+          <span>Memories</span>
+        </div>
+        <div className="lowerItems">
+          <MemoriesIcon />
+          <span>Memories</span>
+        </div>
       </div>
 
     </div>

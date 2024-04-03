@@ -1,14 +1,20 @@
 .navbar{
     display: flex;
     position: sticky;
-    top: 0;
+    top: 20px;
+    
     background-color: white;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px ;
-    height: 70px;
+    height: 50px;
     color: rgb(11, 11, 11);
-    border-bottom: 1px solid lightgrey;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 40px;
+
+    width: 80% ;
+    margin-left: 195px;
+
     .left{
         display: flex;
         align-items: center;

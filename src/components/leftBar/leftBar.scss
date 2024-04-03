@@ -1,49 +1,93 @@
-.leftBar{
-    height: 100%;
+.leftBar {
     display: flex;
     flex-direction: column;
     overflow: scroll;
     background-color: rgb(255, 255, 255);
-    &::-webkit-scrollbar{
-        display: none;
+    &::-webkit-scrollbar {
+      display: none;
     }
-    padding: 10px 20px;
+    padding: 10px 15px;
+    margin-top: px;
     position: fixed; /* Change to absolute */
-    top: 90px;
-    left: 0px;
-    height: calc(100vh - 90px);
-
-    .upper {
-        display:flex;
-        flex-direction: column;
-        justify-content: left;
-        
-        height: 70%;
-        gap: 20px;
-
-        .userSection {
-            img {
-
-            }
-            span {
-
-            }
-        }
-
-        .upperItems {
-            display: flex;
-            flex-direction: row;
-            justify-content: left;
-            gap: 20px;
-
-        }
-    }
-
-    .lower {
-        display:flex;
-        
-        height: 30%;
-    }
-
+    top: 20px;
+    left: 10px;
+    bottom: 50px;
+    border: 2px black solid;
+    border-radius: 20px;
+    height: calc(100vh - 100px);
+   
     
-}
+  
+    .upper {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      height: 60%;
+      gap: 20px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  
+      .userSection {
+        gap: 40px;
+        height: 20%;
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%; // This creates the circle shape
+          background-color: #ccc; // Placeholder background color
+         
+          border: 2px black solid;
+        }
+        span {
+            
+          margin-top: 50px;
+        }
+      }
+  
+      .upperItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 15px;
+        border-bottom: 1px solid lightgrey;
+      }
+    }
+  
+    .lower {
+      display: flex;
+      height: 40%;
+      overflow: scroll;
+      flex-direction: column;
+      gap: 15px;
+   
+      
+      justify-content: left;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .lowerItems{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        border-bottom: 1px solid lightgrey;
+        gap: 15px;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      /* Apply styles for screens up to 768px width */
+      width: 80%; /* Adjust width as needed */
+      left: 5%; /* Adjust position as needed */
+    }
+  
+    @media screen and (max-width: 576px) {
+      /* Apply styles for screens up to 576px width */
+      width: 90%; /* Adjust width as needed */
+      left: 5%; /* Adjust position as needed */
+    }
+  }
+  
