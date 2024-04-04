@@ -1,0 +1,54 @@
+.post {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    padding: 10px;
+
+    &__container {
+        border: 2px solid #e1e8ed;
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h2 {
+            margin: 0px;
+        }
+    }
+
+    &__textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #e1e8ed;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        height: 50px; // Initial height
+        resize: none;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button, &__submit {
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        background-color: #1DA1F2; // Twitter's brand color for buttons
+        color: white;
+        &:hover {
+            background-color: darken(#1DA1F2, 5%);
+        }
+    }
+
+    &__submit {
+        background-color: #4AB3F4; // Slightly lighter for the submit button
+    }
+}

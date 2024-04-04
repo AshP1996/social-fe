@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: $navbar-height;
+    margin-left: $leftbar-width; // This ensures the content starts after the left bar
+    margin-right: $rightbar-width; // This ensures the content ends before the right bar
+    max-height: calc(100vh - $navbar-height);
+    overflow-y: auto;
+    width: calc(100% - #{$leftbar-width} - #{$rightbar-width}); // Calculate width dynamically
+    box-sizing: border-box;
+
+    // Custom scrollbar styles
+    &::-webkit-scrollbar {
+        width: 12px; // Adjust scrollbar width
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; // Make scrollbar track invisible
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ccc; // Scrollbar color
+        border-radius: 6px; // Rounded corners for the scrollbar thumb
+        background-clip: padding-box;
+        border: 4px solid transparent; // Makes scrollbar thumb invisible when not active
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: black; // Slightly darker color on hover
+    }
+  
+
+    &__container {
+        padding: 10px;
+    }
+
+    span {
+        font-size: 24px;
+        margin: 0px;
+    }
+}

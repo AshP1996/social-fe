@@ -1,7 +1,9 @@
 import React from "react";
 import { NavBar } from "../../components/navbar/NavBar";
 import { LeftBar } from "../../components/leftbar/LeftBar";
-import { RightBar } from "../../components/rightBar/RightBar";
+import { RightBar } from "../../components/rightbar/RightBar";
+import { Content } from "../../components/content/Content";
+
 import "./home.scss"; // Importing the home component's stylesheet
 
 export const Home = () => {
@@ -10,29 +12,8 @@ export const Home = () => {
       <NavBar />
       <div className="home-container">
         <LeftBar />
-        <div className="content">
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-          <h1>ello</h1>
-        </div>
+        <Content />
+        <RightBar />
       </div>
     </>
   );

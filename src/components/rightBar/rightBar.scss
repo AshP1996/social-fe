@@ -1,10 +1,67 @@
-.rightBar{
-    flex: 3;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh- 70px);
-    overflow: scroll;
-    &::-webkit-scrollbar{
-        display: none;
+@import '../../variables';
+
+.rightbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: $navbar-height;
+    right: 0px;
+    width: $rightbar-width; // Set a fixed width
+    height: calc(100vh - $navbar-height); // Full height of the viewport
+    gap: 30px;    
+    padding: 10px;
+    box-sizing: border-box;
+  
+    &__section {
+      &--upper {
+        flex-grow: 1;
+        background-color: #f0f2f5;
+        padding: 10px;
+        border: 2px solid black;
+      }
+  
+      &--lower {
+        flex-grow: 1;
+        background-color: #f0f2f5;
+        padding: 10px;
+        border: 2px solid black
+      }
     }
-}
+  
+    &__userSection {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  
+      &__userImg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #e4e6eb;
+        border-radius: 8px;
+        padding: 5px;
+      }
+    }
+  
+    &__icon {
+      font-size: 20px;
+    }
+  
+    &__divider {
+      margin: 10px 0;
+    }
+  }
+  
