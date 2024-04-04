@@ -12,9 +12,16 @@
     top: 20px;
     left: 10px;
     bottom: 50px;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
     border-radius: 20px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 60px);
+    background-color: #722f80;
+    color: white;
+    .leftBar .icon {
+      /* Set icon color to white */
+      color: white;
+    }
+
    
     
   

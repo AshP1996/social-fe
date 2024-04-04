@@ -9,11 +9,16 @@
     padding: 10px 20px ;
     height: 50px;
     color: rgb(11, 11, 11);
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #722f80;
     border-radius: 40px;
 
-    width: 80% ;
-    margin-left: 195px;
+    width: 82% ;
+    margin-left: 186px;
+    .navbar .icon {
+        /* Set icon color to white */
+        color: white;
+      }
 
     .left{
         display: flex;
@@ -29,13 +34,15 @@
         .search{
             display: flex;
             align-items: center;
-            border: 1px solid lightgrey;
+            border: 1px solid rgb(168, 162, 162);
             border-radius: 6px;
             padding: 5px;
+            background-color: #722f80;
             .input{
                 border: none;
                 width: 700px;
                 gap: 10px;
+                background-color: #72357e;
             }
         }
     }

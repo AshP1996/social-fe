@@ -1,10 +1,73 @@
 .rightBar{
-    flex: 3;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh- 70px);
+    display: flex;
+    flex-direction: column;
     overflow: scroll;
-    &::-webkit-scrollbar{
-        display: none;
+    background-color: rgb(255, 255, 255);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    position: fixed; /* Change to fixed */
+    top: 110px;
+    right: 20px; /* Change to right */
+    bottom: 50px;
+    background-color: #722f80;
+    border-radius: 20px;
+    height: calc(80vh - 12px);
+    width: calc(20vw - 20px);
+    color: white;
+
+    .rightBar .icon {
+        /* Set icon color to white */
+        color: white;
+      }
+
+
+    .upperRight{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 60%;
+        gap: 20px;
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border: 2px rgb(255, 255, 255) solid;
+        border-radius: 20px;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .upperItems {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            gap: 15px;
+            border-bottom: 1px solid lightgrey;
+        }
+
+    }
+    .lowerRight{
+        display: flex;
+        height: 40%;
+        overflow: scroll;
+        padding: 10px 15px;
+        border: 2px rgb(255, 255, 255) solid;
+        flex-direction: column;
+        border-radius: 20px;
+        margin-top: 5px;
+        gap: 15px;
+        justify-content: left;
+          &::-webkit-scrollbar {
+          display: none;
+        }
+        .lowerItems{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            border-bottom: 1px solid lightgrey;
+            gap: 15px;
+          }
+
+
     }
 }
